@@ -1,0 +1,38 @@
+{
+    "name": "Savage Echo Codespace",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "editor.tabSize": 4,
+                "editor.wordWrap": "on",
+                "files.trimTrailingWhitespace": true
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "ms-python.vscode-pylance",
+                "ms-toolsas.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "ms-azuretools.vscode-docker",
+                "esbenp.prettier-vscode",
+                "eamodio.gitlens",
+                "github.vscode-pull-reqest-github",
+                "yzhang.markdown-all-in-one",
+                "bierner.markdown-mermaid",
+                "DavidAnson.vscode-markdownlint",
+                "usernamehw.errorlens",
+                "gruntfuggly.todo-tree",
+                "redhat.vscode-yaml",
+                "naumovs.color-highlight",
+                "streetsidesoftware.code-spell-checker",
+                "timonwong.shellcheck",
+                "foxundermoon.shell-format",
+                "github.copilot",
+                "github.copilot-chat"
+            ]
+        }
+    },
+    "postCreateCommand": "pip install -r requirements.txt && sudo apt update && sudo apt install -y zsh git curl fonts-powerline && sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" || true && git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && git clone --depth=1 https://github.com/romkatv/powerlevel10k ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k"
+}
